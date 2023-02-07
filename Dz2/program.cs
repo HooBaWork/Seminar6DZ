@@ -2,6 +2,8 @@
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)*/
 
 //С консоли от пользователя принимаем 4 точки: b1,k1,b2,k2.Запихиваем их в массив или в переменные .Т к данных немного,думаю лучше сразу в переменные типа double/float.
+void main()
+{
 Console.Clear();
 Console.WriteLine("Введите точку начала прямой 1");
 double b1 = double.Parse(Console.ReadLine());
@@ -11,6 +13,8 @@ Console.WriteLine("Введите точку конца прямой 1");
 double b2 = double.Parse(Console.ReadLine());
 Console.WriteLine("Введите точку конца прямой 2");
 double k2 = double.Parse(Console.ReadLine());
+result(b1, k1, b2, k2);
+}
 
 void result( double b1, double k1, double b2, double k2)    //Полученные данные отправляем в функцию,для нахождения точки пересечения двух прямых.Точка это координаты x,y.
 {
@@ -28,4 +32,4 @@ else
 Console.Write($"Точка пересечения прямых: ({x}; {y})");
 }
 
-result(b1, k1, b2, k2);
+main();
